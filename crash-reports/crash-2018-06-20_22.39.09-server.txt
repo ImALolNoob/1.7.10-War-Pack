@@ -1,0 +1,171 @@
+---- Minecraft Crash Report ----
+// Ouch. That hurt :(
+
+Time: 20/06/18 22:39
+Description: Exception in server tick loop
+
+java.lang.NoSuchMethodError: net.minecraft.server.management.PlayerManager.<init>(Lnet/minecraft/world/WorldServer;I)V
+	at net.minecraft.world.WorldServer.<init>(WorldServer.java:168)
+	at net.minecraft.server.MinecraftServer.func_71247_a(MinecraftServer.java:375)
+	at net.minecraft.server.dedicated.DedicatedServer.func_71197_b(DedicatedServer.java:337)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:643)
+	at java.lang.Thread.run(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Thermos Version: Windows 10 (amd64) version 10.0
+	Plugins: 1.8.0_171, Oracle Corporation
+	Disabled Plugins: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Operating System: 1007929176 bytes (961 MB) / 1851785216 bytes (1766 MB) up to 3585081344 bytes (3419 MB)
+	Java Version: 2 total; -Xms950M -Xmx3846M
+	Java VM Version: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Memory: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	JVM Flags: 2 total; -Xms950M -Xmx3846M
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1614 62 mods loaded, 62 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAA	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAA	FML{7.10.99.99} [Forge Mod Loader] (Thermos-1.7.10-1614-57-server.jar) 
+	UCHIJAA	Forge{10.13.4.1614} [Minecraft Forge] (Thermos-1.7.10-1614-57-server.jar) 
+	UCHIJAA	kimagine{0.2} [KImagine] (minecraft.jar) 
+	UCHIJAA	appliedenergistics2-core{rv2-stable-10} [AppliedEnergistics2 Core] (minecraft.jar) 
+	UCHIJAA	CodeChickenCore{1.0.7.47} [CodeChicken Core] (minecraft.jar) 
+	UCHIJAA	voltzenginepreloader{0.0.1} [Voltz Engine Preloader] (minecraft.jar) 
+	UCHIJAA	<CoFH ASM>{000} [CoFH ASM] (minecraft.jar) 
+	UCHIJAA	debug{1.0} [debug] (denseores-1.6.2.jar) 
+	UCHIJAA	appliedenergistics2{rv2-stable-10} [Applied Energistics 2] (appliedenergistics2-rv2-stable-10.jar) 
+	UCHIJAA	bdlib{1.9.4.109} [BD Lib] (bdlib-1.9.4.109-mc1.7.10.jar) 
+	UCHIJAA	ae2stuff{0.5.0.56} [AE2 Stuff] (ae2stuff-0.5.0.56-mc1.7.10.jar) 
+	UCHIJAA	ForgeMultipart{1.2.0.345} [Forge Multipart] (ForgeMultipart-1.7.10-1.2.0.345-universal.jar) 
+	UCHIJAA	chisel{2.9.5.11} [Chisel] (Chisel-2.9.5.11.jar) 
+	UCHIJAA	CarpentersBlocks{3.3.8} [Carpenter's Blocks] (Carpenter's Blocks v3.3.8 - MC 1.7.10.jar) 
+	UCHIJAA	CoFHCore{1.7.10R3.1.2} [CoFH Core] (CoFHCore-[1.7.10]3.1.2-325.jar) 
+	UCHIJAA	endercore{1.7.10-0.2.0.36_beta} [EnderCore] (EnderCore-1.7.10-0.2.0.36_beta.jar) 
+	UCHIJAA	Mekanism{9.0.3} [Mekanism] (Mekanism-1.7.10-9.0.3.277.jar) 
+	UCHIJAA	EnderIO{1.7.10-2.2.8.381} [Ender IO] (EnderIO-1.7.10-2.2.8.381.jar) 
+	UCHIJAA	EnderStorage{1.4.7.37} [EnderStorage] (EnderStorage-1.7.10-1.4.7.37-universal.jar) 
+	UCHIJAA	ThermalFoundation{1.7.10R1.2.4} [Thermal Foundation] (ThermalFoundation-[1.7.10]1.2.4-114.jar) 
+	UCHIJAA	ThermalExpansion{1.7.10R4.1.2} [Thermal Expansion] (ThermalExpansion-[1.7.10]4.1.2-240.jar) 
+	UCHIJAA	EnderTech{1.7.10-0.3.2.405} [EnderTech] (EnderTech-1.7.10-0.3.2.405.jar) 
+	UCHIJAA	EnderZoo{1.7.10-1.0.15.32} [Ender Zoo] (EnderZoo-1.7.10-1.0.15.32.jar) 
+	UCHIJAA	Waila{1.5.10} [Waila] (Waila-1.5.10_1.7.10.jar) 
+	UCHIJAA	extracells{2.3.9} [Extra Cells 2] (ExtraCells-1.7.10-2.3.9b188.jar) 
+	UCHIJAA	ExtraUtilities{1.2.12} [Extra Utilities] (extrautilities-1.2.12.jar) 
+	UCHIJAA	Mantle{1.7.10-0.3.2.jenkins191} [Mantle] (Mantle-Mod-1.7.10.jar) 
+	UCHIJAA	TConstruct{1.7.10-1.8.8.build988} [Tinkers' Construct] (TConstruct-Mod-1.7.10.jar) 
+	UCHIJAA	ExtraTiC{1.4.6} [ExtraTiC] (ExtraTiC-1.7.10-1.4.6.jar) 
+	UCHIJAA	FTBL{1.0.18.2} [FTBLib] (FTBLib-1.7.10-1.0.18.3.jar) 
+	UCHIJAA	FTBU{1.0.18.2} [FTBUtilities] (FTBUtilities-1.7.10-1.0.18.3.jar) 
+	UCHIJAA	voltzengine{1.9.14.302} [Voltz Engine] (VoltzEngine-1.7.10-1.9.14b302.jar) 
+	UCHIJAA	icbm{2.15.4.497} [ICBM] (ICBM-1.7.10-2.15.4b497.jar) 
+	UCHIJAA	MekanismGenerators{9.0.3} [MekanismGenerators] (MekanismGenerators-1.7.10-9.0.3.277.jar) 
+	UCHIJAA	MekanismTools{9.0.3} [MekanismTools] (MekanismTools-1.7.10-9.0.3.277.jar) 
+	UCHIJAA	NetherOres{1.7.10R2.3.1} [Nether Ores] (NetherOres-[1.7.10]2.3.1-22.jar) 
+	UCHIJAA	MrTJPCoreMod{1.1.0.33} [MrTJPCore] (MrTJPCore-1.7.10-1.1.0.33-universal.jar) 
+	UCHIJAA	ProjRed|Core{4.7.0pre12.95} [ProjectRed Core] (ProjectRed-1.7.10-4.7.0pre12.95-Base.jar) 
+	UCHIJAA	ProjRed|Transmission{4.7.0pre12.95} [ProjectRed Transmission] (ProjectRed-1.7.10-4.7.0pre12.95-Integration.jar) 
+	UCHIJAA	ProjRed|Transportation{4.7.0pre12.95} [ProjectRed Transportation] (ProjectRed-1.7.10-4.7.0pre12.95-Mechanical.jar) 
+	UCHIJAA	ProjRed|Exploration{4.7.0pre12.95} [ProjectRed Exploration] (ProjectRed-1.7.10-4.7.0pre12.95-World.jar) 
+	UCHIJAA	ProjRed|Compatibility{4.7.0pre12.95} [ProjectRed Compatibility] (ProjectRed-1.7.10-4.7.0pre12.95-Compat.jar) 
+	UCHIJAA	ProjRed|Integration{4.7.0pre12.95} [ProjectRed Integration] (ProjectRed-1.7.10-4.7.0pre12.95-Integration.jar) 
+	UCHIJAA	ProjRed|Fabrication{4.7.0pre12.95} [ProjectRed Fabrication] (ProjectRed-1.7.10-4.7.0pre12.95-Fabrication.jar) 
+	UCHIJAA	ProjRed|Illumination{4.7.0pre12.95} [ProjectRed Illumination] (ProjectRed-1.7.10-4.7.0pre12.95-Lighting.jar) 
+	UCHIJAA	ProjRed|Expansion{4.7.0pre12.95} [ProjectRed Expansion] (ProjectRed-1.7.10-4.7.0pre12.95-Mechanical.jar) 
+	UCHIJAA	RedstoneArsenal{1.7.10R1.1.2} [Redstone Arsenal] (RedstoneArsenal-[1.7.10]1.1.2-92.jar) 
+	UCHIJAA	ThermalDynamics{1.7.10R1.2.0} [Thermal Dynamics] (ThermalDynamics-[1.7.10]1.2.0-171.jar) 
+	UCHIJAA	TiCTooltips{1.2.5} [TiC Tooltips] (TiCTooltips-mc1.7.10-1.2.5.jar) 
+	UCHIJAA	voltzenginemodcompat{1.9.14.302} [Voltz Engine Mod Compatibility Loader] (VoltzEngine-1.7.10-1.9.14b302.jar) 
+	UCHIJAA	voltzenginemodflag{1.9.14.302} [VoltzEngine mod protection, flag, and region system] (VoltzEngine-1.7.10-1.9.14b302.jar) 
+	UCHIJAA	WailaHarvestability{1.1.6} [Waila Harvestability] (WailaHarvestability-mc1.7.10-1.1.6.jar) 
+	UCHIJAA	wailaplugins{MC1.7.10-0.2.0-23} [WAILA Plugins] (WAILAPlugins-MC1.7.10-0.2.0-23.jar) 
+	UCHIJAA	wawla{1.3.1} [What Are We Looking At] (Wawla-1.0.5.120.jar) 
+	UCHIJAA	McMultipart{1.2.0.345} [Minecraft Multipart Plugin] (ForgeMultipart-1.7.10-1.2.0.345-universal.jar) 
+	UCHIJAA	ForgeRelocation{0.0.1.4} [ForgeRelocation] (ForgeRelocation-1.7.10-0.0.1.4-universal.jar) 
+	UCHIJAA	MCFrames{1.0} [MCFrames] (ForgeRelocation-1.7.10-0.0.1.4-universal.jar) 
+	UCHIJAA	RelocationFMP{0.0.1.2} [RelocationFMP] (ForgeRelocationFMP-1.7.10-0.0.1.2-universal.jar) 
+	UCHIJAA	denseores{1.0} [Dense Ores] (denseores-1.6.2.jar) 
+	UCHIJAA	IguanaTweaksTConstruct{1.7.10-2.1.6.163} [Iguana Tinker Tweaks] (Iguanas-Tinker-Tweaks-Mod-1.7.10.jar) 
+	UCHIJAA	ForgeMicroblock{1.2.0.345} [Forge Microblocks] (ForgeMultipart-1.7.10-1.2.0.345-universal.jar) 
+	AE2 Version: stable rv2-stable-10 for Forge 10.13.2.1291
+	CoFHCore: -[1.7.10]3.1.2-325
+	ThermalFoundation: -[1.7.10]1.2.4-114
+	ThermalExpansion: -[1.7.10]4.1.2-240
+	Mantle Environment: DO NOT REPORT THIS CRASH! Unsupported mods in environment: bukkit
+	TConstruct Environment: Environment healthy.
+	NetherOres: -[1.7.10]2.3.1-22
+	RedstoneArsenal: -[1.7.10]1.1.2-92
+	ThermalDynamics: -[1.7.10]1.2.0-171
+	List of loaded APIs: 
+		* appliedenergistics2|API (rv2) from appliedenergistics2-rv2-stable-10.jar
+		* Baubles|API (1.0.1.10) from ThermalFoundation-[1.7.10]1.2.4-114.jar
+		* BuildCraftAPI|core (1.0) from extrautilities-1.2.12.jar
+		* BuildCraftAPI|tools (1.0) from extrautilities-1.2.12.jar
+		* CarpentersBlocks|API (3.3.7) from Carpenter's Blocks v3.3.8 - MC 1.7.10.jar
+		* ChiselAPI (0.1.1) from Chisel-2.9.5.11.jar
+		* ChiselAPI|Carving (0.1.1) from Chisel-2.9.5.11.jar
+		* ChiselAPI|Rendering (0.1.1) from Chisel-2.9.5.11.jar
+		* CoFHAPI (1.7.10R1.1.0) from CoFHCore-[1.7.10]3.1.2-325.jar
+		* CoFHAPI|block (1.7.10R1.0.13B2) from CoFHLib-[1.7.10]1.1.1-181.jar
+		* CoFHAPI|core (1.7.10R1.0.13B2) from CoFHLib-[1.7.10]1.1.1-181.jar
+		* CoFHAPI|energy (1.7.10R1.0.10) from Mekanism-1.7.10-9.0.3.277.jar
+		* CoFHAPI|fluid (1.7.10R1.0.13B2) from CoFHLib-[1.7.10]1.1.1-181.jar
+		* CoFHAPI|inventory (1.7.10R1.0.13B2) from CoFHLib-[1.7.10]1.1.1-181.jar
+		* CoFHAPI|item (1.7.10R1.0.10) from Mekanism-1.7.10-9.0.3.277.jar
+		* CoFHAPI|modhelpers (1.7.10R1.0.13B2) from CoFHLib-[1.7.10]1.1.1-181.jar
+		* CoFHAPI|tileentity (1.7.10R1.0.3) from EnderIO-1.7.10-2.2.8.381.jar
+		* CoFHAPI|transport (1.7.10R1.0.3) from EnderIO-1.7.10-2.2.8.381.jar
+		* CoFHAPI|world (1.7.10R1.1.0) from EnderTech-1.7.10-0.3.2.405.jar
+		* CoFHLib (1.7.10R1.0.3B3) from CoFHLib-[1.7.10]1.1.1-181.jar
+		* CoFHLib|audio (1.7.10R1.1.2) from CoFHCore-[1.7.10]3.1.2-325.jar
+		* CoFHLib|gui (1.7.10R1.0.4B1) from EnderTech-1.7.10-0.3.2.405.jar
+		* CoFHLib|gui|container (1.7.10R1.0.3B3) from CoFHLib-[1.7.10]1.1.1-181.jar
+		* CoFHLib|gui|element (1.7.10R1.1.2) from CoFHCore-[1.7.10]3.1.2-325.jar
+		* CoFHLib|gui|element|listbox (1.7.10R1.0.4B1) from EnderTech-1.7.10-0.3.2.405.jar
+		* CoFHLib|gui|slot (1.7.10R1.1.2) from CoFHCore-[1.7.10]3.1.2-325.jar
+		* CoFHLib|inventory (1.7.10R1.0.4B1) from EnderTech-1.7.10-0.3.2.405.jar
+		* CoFHLib|render (1.7.10R1.0.3B3) from CoFHLib-[1.7.10]1.1.1-181.jar
+		* CoFHLib|render|particle (1.7.10R1.1.2) from CoFHCore-[1.7.10]3.1.2-325.jar
+		* CoFHLib|util (1.7.10R1.1.2) from CoFHCore-[1.7.10]3.1.2-325.jar
+		* CoFHLib|util|helpers (1.7.10R1.0.4B1) from EnderTech-1.7.10-0.3.2.405.jar
+		* CoFHLib|util|position (1.7.10R1.1.2) from CoFHCore-[1.7.10]3.1.2-325.jar
+		* CoFHLib|world (1.7.10R1.0.4B1) from EnderTech-1.7.10-0.3.2.405.jar
+		* CoFHLib|world|feature (1.7.10R1.0.3B3) from CoFHLib-[1.7.10]1.1.1-181.jar
+		* EnderIOAPI (0.0.2) from EnderIO-1.7.10-2.2.8.381.jar
+		* EnderIOAPI|Redstone (0.0.2) from EnderIO-1.7.10-2.2.8.381.jar
+		* EnderIOAPI|Tools (0.0.2) from EnderIO-1.7.10-2.2.8.381.jar
+		* ForgeRelocation|API (0.0.1.4) from ForgeRelocation-1.7.10-0.0.1.4-universal.jar
+		* MekanismAPI|core (9.0.0) from Mekanism-1.7.10-9.0.3.277.jar
+		* MekanismAPI|energy (9.0.0) from Mekanism-1.7.10-9.0.3.277.jar
+		* MekanismAPI|gas (9.0.0) from Mekanism-1.7.10-9.0.3.277.jar
+		* MekanismAPI|infuse (9.0.0) from Mekanism-1.7.10-9.0.3.277.jar
+		* MekanismAPI|laser (9.0.0) from Mekanism-1.7.10-9.0.3.277.jar
+		* MekanismAPI|reactor (9.0.0) from Mekanism-1.7.10-9.0.3.277.jar
+		* MekanismAPI|recipe (9.0.0) from Mekanism-1.7.10-9.0.3.277.jar
+		* MekanismAPI|transmitter (9.0.0) from Mekanism-1.7.10-9.0.3.277.jar
+		* MekanismAPI|util (9.0.0) from Mekanism-1.7.10-9.0.3.277.jar
+		* VoltzEngineAPI (0.11.0) from VoltzEngine-1.7.10-1.9.14b302.jar
+		* VoltzEngineAPI|crafting-items (0.11.0) from VoltzEngine-1.7.10-1.9.14b302.jar
+		* VoltzEngineAPI|data (0.11.0) from VoltzEngine-1.7.10-1.9.14b302.jar
+		* VoltzEngineAPI|energy (0.11.0) from VoltzEngine-1.7.10-1.9.14b302.jar
+		* VoltzEngineAPI|energy-items (0.11.0) from VoltzEngine-1.7.10-1.9.14b302.jar
+		* VoltzEngineAPI|event (0.11.0) from VoltzEngine-1.7.10-1.9.14b302.jar
+		* VoltzEngineAPI|explosive-items (0.11.0) from VoltzEngine-1.7.10-1.9.14b302.jar
+		* VoltzEngineAPI|explosives (0.11.0) from VoltzEngine-1.7.10-1.9.14b302.jar
+		* VoltzEngineAPI|items (0.11.0) from VoltzEngine-1.7.10-1.9.14b302.jar
+		* VoltzEngineAPI|recipe (0.11.0) from VoltzEngine-1.7.10-1.9.14b302.jar
+		* VoltzEngineAPI|tile (0.11.0) from VoltzEngine-1.7.10-1.9.14b302.jar
+		* VoltzEngineAPI|tools (0.11.0) from VoltzEngine-1.7.10-1.9.14b302.jar
+		* VoltzEngineAPI|weapons (0.11.0) from VoltzEngine-1.7.10-1.9.14b302.jar
+		* WailaAPI (1.2) from Waila-1.5.10_1.7.10.jar
+	Chisel: Errors like "[FML]: Unable to lookup ..." are NOT the cause of this crash. You can safely ignore these errors. And update forge while you're at it.
+	AE2 Integration: IC2:OFF, RotaryCraft:OFF, RC:OFF, BC:OFF, RF:ON, RFItem:ON, MFR:OFF, DSU:ON, FZ:OFF, FMP:ON, RB:OFF, CLApi:OFF, Waila:ON, Mekanism:ON, ImmibisMicroblocks:OFF, BetterStorage:OFF
+	Profiler Position: N/A (disabled)
+	Player Count: 0 / 8; []
+	Is Modded: Definitely; Server brand changed to 'thermos,cauldron,craftbukkit,mcpc,kcauldron,fml,forge'
+	Type: Dedicated Server (map_server.txt)
